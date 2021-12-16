@@ -4,11 +4,11 @@ import { ListGroup } from 'react-bootstrap';
 const Contact = () => {
 	const { contacts } = useContacts();
 
-	console.log('Contact', contacts);
+	// console.log('Contact', contacts);
 
 	return (
 		<ListGroup variant='flush'>
-			{contacts.map((contact) => {
+			{contacts?.map((contact) => {
 				return <ListGroup.Item key={contact.id}>{contact.name}</ListGroup.Item>;
 			})}
 		</ListGroup>
