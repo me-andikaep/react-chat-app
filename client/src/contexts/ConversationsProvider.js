@@ -64,7 +64,7 @@ const ConversationsProvider = ({ id, children }) => {
 	}, [socket, addMessageToConvertsation]);
 
 	function sendMessage(recipients, text) {
-		socket.emit('send-message', recipients, text);
+		socket.emit('send-message', { recipients, text });
 		addMessageToConvertsation({ recipients, text, sender: id });
 	}
 
